@@ -1,0 +1,18 @@
+version: '2.1'
+
+services:
+
+  wordpress:
+    build: .
+    ports:
+      - 8080:80
+    environment:
+      WORDPRESS_DB_PASSWORD: pass
+    depends_on:
+      mysql:
+        condition: service_healthy
+
+  mysql:
+    image: healthcheck/mariadb
+    environment:
+      MYSQL_ROOT_PASSWORD: pass

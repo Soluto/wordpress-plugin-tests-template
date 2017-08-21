@@ -1,0 +1,10 @@
+{
+    "require": {
+        "jdgrimes/wp-http-testcase": "1.*",
+        "rregeer/phpunit-coverage-check": "0.*",
+        "phpunit/phpunit":"~5.5.0",
+        "phpunit/php-invoker": "~1.1.4",
+        "phpunit/php-code-coverage": "^4",
+        "athletic/athletic":"~0.1"
+    }
+}
