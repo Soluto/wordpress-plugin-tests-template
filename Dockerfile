@@ -26,4 +26,4 @@ WORKDIR /wordpress
 COPY composer.json /wordpress
 RUN composer install
 COPY . /wordpress
-ENTRYPOINT bin/install-db.sh wordpress_test root $WORDPRESS_DB_PASSWORD mysql
+CMD bin/install-db.sh wordpress_test root $WORDPRESS_DB_PASSWORD mysql

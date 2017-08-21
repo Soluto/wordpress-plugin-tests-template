@@ -38,4 +38,3 @@ install_db() {
 }
 
 install_db
-vendor/bin/phpunit
