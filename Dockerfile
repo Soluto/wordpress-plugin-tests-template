@@ -16,10 +16,9 @@ RUN echo "http://dl-3.alpinelinux.org/alpine/edge/main" >> /etc/apk/repositories
     && echo "xdebug.remote_connect_back=0" >> /usr/local/etc/php/conf.d/docker-php-ext-xdebug.ini \
     && curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer \
     && rm -rf /tmp/*
-
 WORKDIR /tmp
 COPY ./bin/install-wp-tests.sh /tmp/install-wp-tests.sh
-ENV WORDPRESS_DB_PASSWORD=pass
+ARG WORDPRESS_DB_PASSWORD=pass
 RUN /tmp/install-wp-tests.sh wordpress_test root $WORDPRESS_DB_PASSWORD mysql latest
 COPY ./db-error.php /tmp/wordpress/wp-content/db-error.php
 WORKDIR /wordpress

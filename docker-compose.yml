@@ -3,11 +3,12 @@ version: '2.1'
 services:
 
   wordpress:
-    build: .
+    build: 
+      context: .
+      args:
+        WORDPRESS_DB_PASSWORD: pass
     ports:
       - 8080:80
-    environment:
-      WORDPRESS_DB_PASSWORD: pass
     depends_on:
       mysql:
         condition: service_healthy
