@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/Soluto/wordpress-plugin-tests-template.svg?branch=master)](https://travis-ci.org/Soluto/wordpress-plugin-tests-template)
+
 # wordpress-plugin-tests-template
 Wordpress plugin development is easy, but when it come to testing things can get complicated pretty fast. 
 Wordpress CLI can generate all that is required to write integration tests for your plugin, with live Wordpress environment.

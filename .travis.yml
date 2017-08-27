@@ -1,5 +1,11 @@
 sudo: required
 
+env:
+  - PHP_IMAGE_TAG=7.0-alpine WORDPRESS_VERSION=latest
+  - PHP_IMAGE_TAG=5.6-alpine WORDPRESS_VERSION=latest
+  - PHP_IMAGE_TAG=7.0-alpine WORDPRESS_VERSION=4.4
+  - PHP_IMAGE_TAG=5.6-alpine WORDPRESS_VERSION=4.4
+
 services:
   - docker
 
