@@ -1,5 +1,5 @@
 {
     "require": {
-        "phpunit/phpunit":"~5.5.0"
+        "phpunit/phpunit":"~6.3.0"
     }
 }
