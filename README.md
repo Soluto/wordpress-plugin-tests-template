@@ -6,6 +6,7 @@ Wordpress CLI can generate all that is required to write integration tests for y
 But to run those tests you need to have PHP and MySql on your machine, which is not always the case.
 This sound like really good used case for `docker` and `docker-compose` - we can create the relevant images and run them easily on any machine that has Docker.
 This also mean that the same version of PHP and MySql that run on your machine, also run on the CI, and you can easily target various PHP/Wordpress versions.
+To learn more about this template in this [blog post](https://blog.solutotlv.com/testing-wordpress-plugins-easy/https://blog.solutotlv.com/userless-mobile-authentication/?utm_source=github)
 
 ## How to run the tests?
 * `docker-compose up --build -d`
