@@ -2,7 +2,10 @@ version: '2.1'
 
 services:
   wordpress:
-    build: 
+    volumes:
+      - ./src:/wordpress/src
+      - ./tests:/wordpress/tests
+    build:
       context: .
       args:
         WORDPRESS_DB_PASSWORD: pass
