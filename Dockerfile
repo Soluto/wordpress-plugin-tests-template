@@ -3,7 +3,7 @@ FROM php:$PHP_IMAGE_TAG
 ARG WORDPRESS_DB_PASSWORD
 ENV WORDPRESS_DB_PASSWORD=$WORDPRESS_DB_PASSWORD
 ARG WORDPRESS_VERSION
-RUN echo "http://dl-3.alpinelinux.org/alpine/edge/main" >> /etc/apk/repositories &&\
+RUN echo "http://dl-cdn.alpinelinux.org/alpine/v3.7/main" >> /etc/apk/repositories &&\
     apk add --update --no-cache subversion mysql mysql-client git bash g++ make autoconf && \
     set -ex; \
     docker-php-ext-install mysqli pdo pdo_mysql pcntl \
